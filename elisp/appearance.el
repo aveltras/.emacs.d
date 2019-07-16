@@ -4,10 +4,7 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-(defconst screen-height-mm
-  (nth 1 (alist-get 'mm-size (nth 0 (display-monitor-attributes-list)))))
-
-(if (> screen-height-mm 200)
+(if (equal "clevo" (system-name))
     (progn
       (add-to-list 'default-frame-alist '(font . "Iosevka-13"))
       (setq-default line-spacing 3))
@@ -15,6 +12,7 @@
       (add-to-list 'default-frame-alist '(font . "Iosevka-18"))
       (setq-default line-spacing 4)))
 
+(add-to-list 'default-frame-alist '(font . "Iosevka-18"))
 (set-face-attribute 'mode-line nil :font "Exo 2 Medium-17")
 
 ; Mode line date and time display
