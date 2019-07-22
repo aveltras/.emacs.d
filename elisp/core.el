@@ -11,6 +11,27 @@
 (global-set-key (kbd "C-x &") 'delete-other-windows)
 (global-set-key (kbd "C-x à") 'delete-window)
 
+(setq scroll-margin 10
+      scroll-step 1
+      scroll-conservatively 10000
+      scroll-preserve-screen-position 1)
+
+(setq make-backup-files nil)
+(show-paren-mode t) ; Highlights matching parens
+(fset 'yes-or-no-p 'y-or-n-p) ; y/n instead of yes/no
+(blink-cursor-mode -1) ; No need to flash the cursor
+(column-number-mode t) ; Show column in mode-line
+(delete-selection-mode 1) ; Replace selection on insert
+(setq-default truncate-lines t ; Don't wrap
+              indent-tabs-mode nil)
+
+(auth-source-pass-enable)
+
+(use-package alert
+  :commands (alert)
+  :init
+  (setq alert-default-style 'notifier))
+
 (use-package company :config (add-hook 'after-init-hook 'global-company-mode))
 (use-package ace-window
   :config
