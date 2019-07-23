@@ -3,8 +3,10 @@
 (setq-default erc-timestamp-only-if-changed-flag nil)
 (setq-default erc-fill-prefix "      + ")
 (setq-default erc-insert-timestamp-function 'erc-insert-timestamp-left)
-(setq-default erc-hide-list '("JOIN" "PART" "QUIT"))
-(add-hook 'erc-mode-hook (lambda () (auto-fill-mode 0)))
+(setq-default erc-hide-list '("JOIN" "PART" "QUIT" "324" "329" "332" "333" "353" "477"))
+(setq-default erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE"
+                                        "324" "329" "332" "333" "353" "477"))
+;; (add-hook 'erc-mode-hook (lambda () (auto-fill-mode 0)))
 
 (defun aveltras/irc ()
   (interactive)

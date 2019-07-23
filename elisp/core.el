@@ -25,6 +25,8 @@
 (setq-default truncate-lines t ; Don't wrap
               indent-tabs-mode nil)
 
+(setq epa-pinentry-mode 'loopback)
+;; (pinentry-start)
 (auth-source-pass-enable)
 
 (use-package alert

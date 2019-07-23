@@ -26,6 +26,6 @@
 (load-user-file "appearance.el")
 (load-user-file "project.el")
 (load-user-file "irc.el")
-;; (load-user-file "mail.el")
+(load-user-file "mail.el")
 (load-user-file "haskell.el")
 (put 'secrets-mode 'disabled nil)
